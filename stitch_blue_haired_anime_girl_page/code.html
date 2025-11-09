@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CyberPop Art - Digital Canvas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        secondary: "#EC4899",
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#111827",
+                        "surface-dark": "#1F2937",
+                        "text-dark": "#F3F4F6",
+                    },
+                    fontFamily: {
+                        display: ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "0.75rem",
+                        xl: "1rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="sticky top-0 h-screen w-20 flex-shrink-0 bg-background-light dark:bg-background-dark py-5 px-3 flex flex-col justify-between border-r border-gray-200 dark:border-surface-dark transition-all duration-300 hover:w-64 group">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 h-12">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 flex-shrink-0" data-alt="A profile picture of a blue-haired anime girl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAH_mIqmhARZVlULqWk48Zrq34qgcPC__4H6sFNhITLeI_GHuWYcZ9vc0ZZ6q4_yu7gl6SThj5tftC_YRf7AZXowsEbEGkz6L4S684O7Us2RyoxuZ9EYfQaAOGVCoK633wHGjbqRy7QG3Hvyp60qbU7rj98LxJEYTakKpg0Qm5J2d9vRtJFWwNrRRzFSxCBR7n1uDAp1oQW3imErKuptSd2I_WK15LjcyIzpuQuDaDoYldcbC8vt8uzuXn40LZNS4JtnhlvYDbidNF7");'></div>
+<div class="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+<h1 class="text-gray-900 dark:text-white text-base font-medium leading-normal">CyberPop Art</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Digital Artist</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-4 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined fill text-2xl flex-shrink-0">home</span>
+<p class="text-sm font-medium leading-normal opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Home</p>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl flex-shrink-0">photo_library</span>
+<p class="text-sm font-medium leading-normal opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Gallery</p>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl flex-shrink-0">person</span>
+<p class="text-sm font-medium leading-normal opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">About</p>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl flex-shrink-0">mail</span>
+<p class="text-sm font-medium leading-normal opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Contact</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-gray-900 dark:hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl flex-shrink-0">settings</span>
+<p class="text-sm font-medium leading-normal opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Settings</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- HeroSection -->
+<div class="@container">
+<div class="flex flex-col gap-6 p-4 @[480px]:gap-8 @[960px]:flex-row bg-background-light dark:bg-surface-dark rounded-xl">
+<div class="flex flex-col gap-6 @[480px]:gap-8 @[960px]:justify-center @[960px]:w-1/2">
+<div class="flex flex-col gap-2 text-left">
+<h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                    Welcome to My Digital Canvas
+                                </h1>
+<h2 class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                    Explore a world where cyber-pop and anime aesthetics collide. Discover my latest creations and projects.
+                                </h2>
+</div>
+<button class="flex min-w-[84px] max-w-[240px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-colors duration-200">
+<span class="truncate">Explore Gallery</span>
+</button>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg @[960px]:w-1/2" data-alt="A vibrant artwork of a blue-haired anime girl in a futuristic city" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjs5f9K50OnyKGvQ2enTvouwf961PucTnJIX87Yrl_dvuRrL3CPUF66u_bqhabBtC9a7U-oMyHJS0mRBjmp-JDI5wV85ylQ63kOVDlZ8IcizMBw6xfTzh1uK0M_R6pn2eEVpzKBTLuXL5qdriQBXyFnPU9QnlunqFVP4ugBb04TkUHMoor5UBVRFCBbEPIajnIakz0andQgrGDbewd_abze1Tt_GgnPn8n963MHqrggjCuMwkzwVRDXtMogtvm0XUoMWw8ErBaCGM0");'></div>
+</div>
+</div>
+<!-- Stats Section -->
+<div class="flex flex-wrap gap-4 p-4 mt-8">
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-background-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-400 text-base font-medium leading-normal">Artworks Created</p>
+<p class="text-gray-900 dark:text-white tracking-light text-3xl font-bold leading-tight">128</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-background-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-400 text-base font-medium leading-normal">Followers</p>
+<p class="text-gray-900 dark:text-white tracking-light text-3xl font-bold leading-tight">42K</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-background-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700">
+<p class="text-gray-600 dark:text-gray-400 text-base font-medium leading-normal">Projects Completed</p>
+<p class="text-gray-900 dark:text-white tracking-light text-3xl font-bold leading-tight">15</p>
+</div>
+</div>
+<!-- SectionHeader -->
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8">Featured Creations</h2>
+<!-- ImageGrid -->
+<div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4 p-4">
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="Cyberpunk girl with neon highlights in a dark alley" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBf_dblu5oIkxg14gleIa7UCH1AoUZbmA3AOIcIdTxqmSP0as75hLAgyq50fs4dejjKo3la4dnGKwGT0Yne0XEQ78Ua4o4L_92Xfe9AeLfxWjavC-kP8-MgQ6peih2TfW6_s7vNuopU1AVMuAqmZohKTnos_mSRKqyWeoEoow2hPtbCOJ90y3VhhUHc9KRqQlMfudR9h6fU9OyKoF7uQwUeeWY0LtdXXz2FEQfcrd8pzdFM5KT77SCP6rK54q0swKvF8A0pDh0G_wMU");'></div>
+<div class="p-1">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal">Neon Dreams</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Latest artwork</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="Glitch art style cityscape with vibrant pink and blue colors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfc1oKFvL6vra4u2caxds2KVMnvpjeYFQpPKE9cU8BWmaClB6AeF_oyaP3Y_WKBjBGLrOAQRpah4ZvHVAyTL1LqilJhY6lM8IH4kkFlXBHunCVBnee_tO3n-9MkRAKkM32CSUsYviwT2ibyaS8gKUcMbv3WXXhHNj1U6w3kJZRFPZyjCg2Ei1zVZRi5MLV18ed660f9C5yIlwYU-hwqR5LI_RRBFYs_xw-uQxOGMXG7lOzhLnYeI4NMjBjM3wkyXjtV2UPKvO_JGFw");'></div>
+<div class="p-1">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal">City Glitch</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Blog post</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="Anime character with headset singing, styled as a virtual idol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDovnrjuaXHtI2K12a-O1BuSItpeRPxoJVn9FrC_EvZ1o3FgGhFMELpjfprIkWD6SWnCv7qMH1gCiDDtrC5XaFyr1i2tzBzic889qgALdpDWqqkT1IZ5rcEDInIgopBhJfUiogKbMobO2mxfFHGtUsqIRKwNIcbEDjZBsgoz9qr4GE_YU-qE3dLkXRgV3O_C7rGzAyy80w_RFNVf8j8S_9M5H7sJdDsRQK3QAx4DF0Icy3-_y7CTKZfYFfkuhj4bBgAO1dK19fJICVF");'></div>
+<div class="p-1">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal">Virtual Idol</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Project highlight</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="Close up of an anime character's eye with reflection of a city" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgYn4qiiES5qEvQg-kUorVW3Vhrj71rgEuqW_IHF9vf42FIqB2x9-NOY0JfV1GMKOVZLWiEFWxZkILtiEQj0FMLZFMvZ8oJIHk9um7KrPJpUVbg9-_k-kG_01e3frHeSxPcSpIQVNFcBU0oOkNcxJ7yNF8uATPEelTco67Wci7k1FhkKxNEr0IHXxXhX1YpxU4kySt0rBDM5Y-zSl4J1tjdfTjL8ha11XCA1oESNjZgWJMKkeeGInq9qZS3_Jfx3D02Rt3j8qVkjck");'></div>
+<div class="p-1">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-normal">Future Gaze</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Character concept</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-12 py-8 px-4 border-t border-gray-200 dark:border-surface-dark">
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2024 CyberPop Art. All Rights Reserved.</p>
+<div class="flex items-center gap-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<!-- Placeholder for Twitter/X Icon -->
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<!-- Placeholder for ArtStation Icon -->
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M.48 15.24h5.04L8.4.24H3.36L.48 15.24zM10.08 6l3.12-5.76h5.28l-5.76 10.56-2.64-4.8zM15.12.24L20.4 10.8l3.12-5.76h-8.4zM9.36 11.28l-2.88 5.28h13.92L24 12l-4.56-8.4-7.2 13.44-2.88-5.76z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</main>
+</div>
+</body></html>
